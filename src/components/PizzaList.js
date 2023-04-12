@@ -1,7 +1,7 @@
 import React from "react";
 import Pizza from "./Pizza";
 
-function PizzaList({pieList}) {
+function PizzaList({pieList, editPizza}) {
   return (
     <table className="table table-striped">
       <thead>
@@ -15,7 +15,7 @@ function PizzaList({pieList}) {
       <tbody>
         {
           pieList.map(pie => {
-            return (<Pizza key={pie.id} pie={pie} />)
+            return (<Pizza key={pie.id} pie={pie} editPizza={editPizza}/>)
           })
         }
       </tbody>
